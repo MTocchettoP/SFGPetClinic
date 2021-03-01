@@ -1,11 +1,11 @@
 package com.gg.sfgpetclinic.services.map;
 
 import com.gg.sfgpetclinic.model.Pet;
-import com.gg.sfgpetclinic.services.CrudService;
+import com.gg.sfgpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet,Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 
     @Override

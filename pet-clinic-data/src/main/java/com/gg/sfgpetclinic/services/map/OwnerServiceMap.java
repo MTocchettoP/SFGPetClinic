@@ -1,15 +1,15 @@
 package com.gg.sfgpetclinic.services.map;
 
 import com.gg.sfgpetclinic.model.Owner;
-import com.gg.sfgpetclinic.services.CrudService;
+import com.gg.sfgpetclinic.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner,Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
 
     @Override
-    public Set<Owner> findall() {
+    public Set<Owner> findAll() {
         return super.findAll();
     }
 
@@ -23,9 +23,15 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
         super.delete(object);
     }
 
+
     @Override
     public Owner save(Owner object) {
         return super.save(object.getId(), object);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 
     @Override
